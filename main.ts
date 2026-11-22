@@ -1,7 +1,7 @@
 import{mkdirSync,readdirSync,readFileSync,writeFileSync}from"node:fs";
 import{join}from"node:path";
 const I=process.env.MAKEFUN_INPUT_DIR??"/input",O=process.env.MAKEFUN_OUTPUT_DIR??"/output",E=new TextEncoder;
-const V=o=>o<8||o>15&&o<35||o>47&&o<53||o>63&&o<66||o>79&&o<84;
+const V=o=>o<8||o>15&&o<35&&o!=31||o>47&&o<53||o>63&&o<66||o>79&&o<84;
 const L=o=>o==1?1:o==2?4:o>47&&o<52?2:0;
 const P=o=>o<8?o==3||o==4?1:o==5||o==6?2:o==7?3:0:o<35?o==23||o==27?1:2:o<53?o==49||o==50?1:0:o==64?1:o==65?2:o==80||o==81||o==83?1:0;
 const Q=o=>o<8?o==1||o==2?1:o==4||o==5?2:o==6||o==7?3:0:o<35?1:o==64||o==82?1:0;
